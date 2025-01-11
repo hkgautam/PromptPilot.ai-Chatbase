@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    background-color: #f5f5f5; /* Light background */
+    color: #333; /* Dark text for light mode */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 800px; /* Center the chat content */
+    padding: 1rem 1rem 4rem; /* Bottom padding for chat input space */
+    box-sizing: border-box;
+}
+
+.chat-input {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    padding: 1rem;
+    box-sizing: border-box;
+    /* background-color: #ffffff; White input bar */
+    /* border-top: 1px solid #ddd; Light border for separation */
+}
+
+.chat-input textarea {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    flex-grow: 1;
+    resize: none;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 30px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: #f9f9f9; /* Light input box */
+    color: #333;
+}
+
+.chat-input textarea:focus {
+    outline: none;
+    border-color: #333; /* Highlighted border when focused */
+}
+
+.chat-input button {
+    background-color: #333; /* Green send button */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #15a568;
+}
+
+.chat-message {
+    align-items: center;
+    /* padding: 1rem; */
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.chat-message.user {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    /* background-color: #e3e3e3; Light blue background for user messages */
+}
+
+.chat-message.bot {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.chat-message .message-text {
+    width: auto;
+    max-width: 75%; /* Limit message width */
+    padding: 8px 16px 8px 16px;
+    border-radius: 30px;
+}
+
+.chat-message.user .message-text {
+    background-color: #e3e3e3; /* Light grey background for bot messages */
+}
+
+.chat-message.bot .message-text {
+    background-color: #e8e8e8; /* Light grey background for bot messages */
+}
+
+.chat-message .icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
+    padding: 4px;
+    border-radius: 50%;
+    border: solid;
+    border-width: 1px;
+    border-color: #888888;
+}
+
+.chat-message.user .icon {
+    margin-left: 0.5rem;
+}
+
+.chat-message.bot .icon {
+    margin-right: 0.5rem;
+}
+
+.welcome-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 10;
+}
+
+
+.welcome-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.welcome-div h1 {
+    font-size: 1.5rem;
+    color: #0078D4;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-div p {
+    font-size: 1rem;
+    color: #555;
+}
